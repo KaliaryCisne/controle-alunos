@@ -5,11 +5,11 @@ namespace App\Http\Controllers\Api\V1\ClassRoom;
 
 use App\ClassRoom;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\ClassRoom\ClassRoomCreateRequest;
 
 class CreateController extends Controller
 {
-    public function create(Request $request)
+    public function create(ClassRoomCreateRequest $request)
     {
         try {
             $classRoom = new ClassRoom();
