@@ -6,11 +6,11 @@ namespace App\Http\Controllers\Api\V1\ClassRoom;
 
 use App\ClassRoom;
 use App\Http\Controllers\Controller;
-use Illuminate\Http\Request;
+use App\Http\Requests\ClassRoom\ClassRoomUpdateRequest;
 
 class UpdateController extends Controller
 {
-    public function update(Request $request, $id)
+    public function update(ClassRoomUpdateRequest $request, $id)
     {
         try {
             $classRoom = ClassRoom::findOrFail($id);

@@ -5,12 +5,12 @@ namespace App\Http\Controllers\Api\V1\Student;
 
 
 use App\Http\Controllers\Controller;
+use App\Http\Requests\Student\StudentUpdateRequest;
 use App\Student;
-use Illuminate\Http\Request;
 
 class UpdateController extends Controller
 {
-    public function update(Request $request, $id)
+    public function update(StudentUpdateRequest $request, $id)
     {
         try {
             $student = Student::findOrFail($id);
